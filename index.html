@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ts-basics</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" />;
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Pattaya" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="text-center title"><strong>TsBasics</strong></h1>
+        </div>
+
+        <div class="jumbotron">
+            <!-- installations -->
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Environment setup</h1>
+                    <div>
+                        <p>Install typescript globally</p>
+                        <code><kbd>npm install -g typescript</kbd></code>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <!-- strong typing -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Strong typing</h1>
+                    <div>
+                        <p>
+                            Variable types include
+                        </p>
+                        <pre class="card">
+                            <kbd>any</kbd>          <code>const number = 5;</code>
+                            <kbd>number</kbd>       <code>const age:number = 23;</code>
+                            <kbd>string</kbd>       <code>const fName: string = 'John';</code>
+                            <kbd>string array</kbd> <code>const friends:string[]=['James', 'Jane', 'Jade'];</code>
+                            <kbd>any array</kbd>    <code>const descr:any[] = [60, 'brown', 5.5, 'tall'];</code> 
+                            <kbd>boolean</kbd>      <code>const qualified:boolean = true;</code>    
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <!-- enums -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Enumerations</h1>
+                    <div>
+                        <p>
+                            Enums allow us to define a set of named constants
+                        </p>
+                        <div>
+                            <pre class="card">
+                                    <code>enum color {Red, Green, Blue};</code>
+                                    <code>console.log(color.Red);</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- type assertions -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Type assertion</h1>
+                    <div>
+                        <p>
+                            It's a way of telling typescript what type of variable it is at compile-time. useful to
+                            access intellisense
+                        </p>
+                        <div>
+                            <pre class="card">
+                                <code>const message:any = "the sentence tests the length property";</code>
+                                <code>let lengthOfMessage = (message as string).length;</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- custom types -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Custom types</h1>
+                    <div>
+                        <p>
+                            you can assign variable types to almost anything in typescript.
+                        </p>
+                        <div>
+                            <pre class="card">
+                                <code>let drawPoint = (point: {x: number, y:number}) => { point.x + point.y }</code>
+                                <code>drawPoint({</code>
+                                <code>    x: 1,</code>
+                                <code>    y: 2</code>
+                                <code>})</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- interfaces -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Interfaces</h1>
+                    <div>
+                        <p>
+                            It is a collection of abstract methods.
+                        </p>
+                        <div>
+                            <pre class="card">
+                                    <code>interface Point{</code>
+                                    <code>    x: number;</code>
+                                    <code>    y: number;</code>
+                                    <code>}</code>
+                                    
+                                    <code>let drawPoint = (point:Point) =>{</code>
+                                    <code>    point.x + point.y;</code>
+                                    <code>}</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- classes -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Classes</h1>
+                    <div>
+                        <p>
+                            It is an extensible program-code-template for creating objects, providing initial values
+                            for state (member variables) and implementations of behavior (member functions or methods)
+                        </p>
+                        <div>
+                            <pre class="card">
+                                    <code>class PointClass{</code>
+                                    <code>    a: number = 12;</code>
+                                    <code>    b: number = 2;</code>
+                                    <code>    draw(){</code>
+                                    <code>        this.a + this.b;</code>
+                                    <code>    }</code>
+                                    <code>}</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- constructors -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Constructors</h1>
+                    <div>
+                        <p>
+                            constructors are special member functions which are created when the object is created or
+                            defined and its task is to initialize the object of its class. It is called constructor
+                            because it constructs the values of data members of the class.
+                        </p>
+                        <div>
+                            <pre class="card">
+                                    <code>class PointsClass {</code>
+                                    <code>    constructor(public a?: number, public b?: number) {}</code>
+                                    <code>    drawPoint() {</code>
+                                    <code>        this.a + this.b;</code>
+                                    <code>    }</code>
+                                    <code>}</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- access modifiers -->
+            <hr />
+            <div class="row">
+                <div class="col-s12">
+                    <h1>Access modifiers</h1>
+                    <div>
+                        <p>
+                            Access modifiers (or access specifiers) are keywords in object-oriented languages that set
+                            the accessibility of classes, methods, and other members
+                        </p>
+                        <div>
+                            <pre class="card">
+                                    <code>class PointssClass {</code>
+                                    <code>    constructor(private x: number, private y: number) {}</code>
+                                    <code>    drawPoint() {</code>
+                                    <code>        this.x + this.y;</code>
+                                    <code>    }</code>
+                                    <code>}</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- THE END -->
+            <!--  -->
+
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
