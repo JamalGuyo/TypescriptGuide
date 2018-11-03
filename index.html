@@ -39,7 +39,7 @@
                             Variable types include
                         </p>
                         <pre class="card">
-                            <kbd>any</kbd>          <code>const number = 5;</code>
+                            <kbd>any</kbd>          <code>const number:any = 5;</code>
                             <kbd>number</kbd>       <code>const age:number = 23;</code>
                             <kbd>string</kbd>       <code>const fName: string = 'John';</code>
                             <kbd>string array</kbd> <code>const friends:string[]=['James', 'Jane', 'Jade'];</code>
@@ -144,10 +144,10 @@
                         <div>
                             <pre class="card">
                                     <code>class PointClass{</code>
-                                    <code>    a: number = 12;</code>
-                                    <code>    b: number = 2;</code>
+                                    <code>    x: number = 12;</code>
+                                    <code>    y: number = 2;</code>
                                     <code>    draw(){</code>
-                                    <code>        this.a + this.b;</code>
+                                    <code>        this.x + this.y;</code>
                                     <code>    }</code>
                                     <code>}</code>
                             </pre>
@@ -168,10 +168,10 @@
                         </p>
                         <div>
                             <pre class="card">
-                                    <code>class PointsClass {</code>
-                                    <code>    constructor(public a?: number, public b?: number) {}</code>
+                                    <code>class PointClass {</code>
+                                    <code>    constructor(public x?: number, public y?: number) {}</code>
                                     <code>    drawPoint() {</code>
-                                    <code>        this.a + this.b;</code>
+                                    <code>        this.x + this.y;</code>
                                     <code>    }</code>
                                     <code>}</code>
                             </pre>
@@ -191,7 +191,7 @@
                         </p>
                         <div>
                             <pre class="card">
-                                    <code>class PointssClass {</code>
+                                    <code>class PointClass {</code>
                                     <code>    constructor(private x: number, private y: number) {}</code>
                                     <code>    drawPoint() {</code>
                                     <code>        this.x + this.y;</code>
