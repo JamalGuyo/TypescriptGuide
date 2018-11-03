@@ -3,13 +3,13 @@ body {
 	.title {
 		font-family: 'Calligraffitti', cursive;
 		font-family: 'Pattaya', sans-serif;
-		color: blue;
+		color: rgba(0, 0, 255, 0.5);
 	}
 	.jumbotron {
-		border-left: 7px solid blue;
+		border-left: 7px solid rgba(0, 0, 255, 0.5);
 		overflow: auto;
 		h1 {
-			color: blue;
+			color: rgba(0, 0, 255, 0.5);
 		}
 		pre.card {
 			color: aqua;

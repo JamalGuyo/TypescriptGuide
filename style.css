@@ -4,14 +4,14 @@ body {
 body .title {
   font-family: "Calligraffitti", cursive;
   font-family: "Pattaya", sans-serif;
-  color: blue;
+  color: rgba(0, 0, 255, 0.5);
 }
 body .jumbotron {
-  border-left: 7px solid blue;
+  border-left: 7px solid rgba(0, 0, 255, 0.5);
   overflow: auto;
 }
 body .jumbotron h1 {
-  color: blue;
+  color: rgba(0, 0, 255, 0.5);
 }
 body .jumbotron pre.card {
   color: aqua;
